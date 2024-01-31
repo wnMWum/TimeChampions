@@ -88,11 +88,69 @@
 
         <hr>
             
-        <h3>Download</h3>
+        <h2>Download</h2>
         <p>To download TimeChampions click the link below.
             <br><a href="TimeChampions.exe">TimeChampions Download</a>
 
         </p>
+
+        <hr>
+
+        <h2>How I created TimeChampions</h2>
+        <p>The following images will show some of the code behind TimeChampions
+            <br>and explain some of the innerworkings of the game.
+        </p>
+
+        <h3>Cars</h3>
+
+        <p>All the cars in the game use the same code to control them. the images below show this code.
+            <br>the accelerating and decelerating is done simply by checking if the up arrow is pressed.
+            <br>If it is then the car accelerates, if it is not then the car decelerates.
+            <br>If the down arrow is pressed then the car decelerates a bit more quickly.
+            <br>The turning is limited by speed. The faster the player is driving the slower the car turns.     
+        </p>
+
+        <div class="image-row">
+
+        </div>
+
+        <h3>Car selection</h3>
+
+        <p>The car selection is simply done by creating clickable objects out of the playable cars.
+            <br>All cars have a global variable which can either be true or false. Depending on what
+            <br>car the player clicks on, the corresponding variable will be turned to true indicating
+            <br>that this car is selected. This will also move the car forward slighly, turn all the
+            <br>other variables to false and change the image that displays the statistics of the car.  
+        </p>
+
+        <div class="image-row">
+
+        </div>
+
+        <h3>Collisions</h3>
+        
+        <p>The collisions with the trackborders are done by checking if the used car and the collisionmasks
+            <br>are overlapping. If they are than the speed of the car is reduced to two, and the car is 
+            <br>pushed back a couple pixels in the opposite direction that the car is hitting the mask with.
+            <br>This ensures that the car does not get stuck in the trackborders.
+        </p>
+
+        <img>
+
+        <h3>Timers</h3>
+
+        <p>To time the player on track and time the countdowns, multiple timers are present in the game.
+            <br>The main one being the start timer. This timer takes care of starting the game, starting the
+            <br>timing system and limiting the players movements.
+            <br>The start timer is started every time a track room is loaded. Its starts running down its first
+            <br>alarm which times the coundown display. Once this alarm has reached zero it will free up the players
+            <br>movement and allows the second alarm to be started. This alarm is started if the player drives over 
+            <br>the trigger and stopped if the player crosses it again. Once the timer is stopped the finish display
+            <br>is shown and the controls are taken away from the player once again.
+        </p>
+
+        <img>
+                
     </center>
 </body>
 
